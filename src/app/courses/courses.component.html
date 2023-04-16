@@ -1,0 +1,17 @@
+<div class="course-container" *ngFor="let course of courses">
+    <div class="course-card">
+        <div>
+            <img [src]="course.image" style="width:220px; height:144px;">
+        </div>
+            <div class="course-title"><h4>{{course.title}}</h4></div>
+            <div class="course-description">{{course.description.slice(0, 80)}}.....</div>
+            <div class="details">
+            <div class="course-type" [ngStyle]="{color: course.type === 'free'?'Green':'Red'}">{{course.type}}</div>
+            <div class="course-price"><b>Price:</b> ₹{{course.price}}</div>
+        </div>
+        <div class="course-button">
+            <button class="btn btn-buy">Buy now</button>
+            <button class="btn btn-show">Details</button>
+        </div>
+    </div>
+</div>
